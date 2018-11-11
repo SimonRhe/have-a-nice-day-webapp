@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+/* Create three equal columns that float next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.mainboxOLD {
+	border: 5px solid black;
+	margin: 10px;
+	height: 100%;
+	width: 33%;
+}
+
+#outerboxOLD {
+	height: 100%;
+	padding: 10px;
+	box-shadow: 10px 10px 20px gray;
+}
+
+</style>
+
+
+
+<title>Have A Nice Day</title>
+</head>
+
+<body>
+
+<div id="outerbox">
+
+<div class="header">
+  <h2>Have A Nice Day</h2>
+  <h3>Sunday, November 11, 2018</h3>
+</div>
+
+
+<div class="row">
+
+  <div class="column" id="projectbox" style="background-color:#aaa;">
+  	<h2>Today's Big 3</h2>
+  	<p>Choose a maximum of 3 projects or long-term goals to work on today, and for each, identify one concrete action to complete today.</p>
+  	<table id="projectlist">
+  		<tr>
+  			<td><input type="checkbox"></td>
+  			<td>Project 1</td>
+  		</tr>
+  		<tr>
+  			<td></td>
+  			<td><input type="text" placeholder="Today I will..."></td>
+  		</tr>
+  	</table>
+  	
+  </div>
+  
+  <div class="column" id="habits" style="background-color:#bbb;">
+  	<h2>Habit Tracker</h2>
+  	<p>How did you do keeping your every day habits today?</p>
+  	<h3>Morning Routine</h3>
+  	<h3>Things to limit</h3>
+  	<h3>Shut Down Ritual<h3>
+  
+  </div>
+  
+  <div class="column" id="journal" style="background-color:#ccc;">
+  	<h2>Journal</h2>
+  	<p>What progress have you made on your projects and long-term goals today?</p>
+  	<p>What are 3 amazing things that happened today?</p>
+  	<p>How could you have made today better?</p>
+  	<p>How was your energy level today?</p>
+  	<p>Summary of the day</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+
+
+</div>
+
+</body>
+
+
+
+
+</html>
