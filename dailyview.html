@@ -5,127 +5,250 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-.header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-}
-
-/* Create three equal columns that float next to each other */
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Style the footer */
-.footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
-}
-
-.mainboxOLD {
-	border: 5px solid black;
-	margin: 10px;
-	height: 100%;
-	width: 33%;
-}
-
-#outerboxOLD {
-	height: 100%;
-	padding: 10px;
-	box-shadow: 10px 10px 20px gray;
-}
-
-</style>
-
+<link href="dailyview.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans+Narrow" rel="stylesheet" /> 
 
 
 <title>Have A Nice Day</title>
 </head>
 
 <body>
+	<!-- TODO: change progress towards goal tracking to checklist: did you accomplish the goals you set today? 
 
-<div id="outerbox">
+Idea: add section: This day last year, 2, 5 years ago
 
-<div class="header">
-  <h2>Have A Nice Day</h2>
-  <h3>Sunday, November 11, 2018</h3>
-</div>
+-->
 
-
-<div class="row">
-
-  <div class="column" id="projectbox" style="background-color:#aaa;">
-  	<h2>Today's Big 3</h2>
-  	<p>Choose a maximum of 3 projects or long-term goals to work on today, and for each, identify one concrete action to complete today.</p>
-  	<table id="projectlist">
-  		<tr>
-  			<td><input type="checkbox"></td>
-  			<td>Project 1</td>
-  		</tr>
-  		<tr>
-  			<td></td>
-  			<td><input type="text" placeholder="Today I will..."></td>
-  		</tr>
-  	</table>
-  	
-  </div>
-  
-  <div class="column" id="habits" style="background-color:#bbb;">
-  	<h2>Habit Tracker</h2>
-  	<p>How did you do keeping your every day habits today?</p>
-  	<h3>Morning Routine</h3>
-  	<h3>Things to limit</h3>
-  	<h3>Shut Down Ritual<h3>
-  
-  </div>
-  
-  <div class="column" id="journal" style="background-color:#ccc;">
-  	<h2>Journal</h2>
-  	<p>What progress have you made on your projects and long-term goals today?</p>
-  	<p>What are 3 amazing things that happened today?</p>
-  	<p>How could you have made today better?</p>
-  	<p>How was your energy level today?</p>
-  	<p>Summary of the day</p>
-  </div>
-</div>
-
-<div class="footer">
-  <p>Footer</p>
-</div>
-
-
-
-</div>
+<div id="topnav">
+		<h2>Have A Nice Day</h2>
+	  </div>
+	  
+	  <div id="outerbox">
+	  
+		<div class="header">
+		  <h3>Sunday, November 11, 2018</h3>
+		</div>
+	  
+		<div class="row">
+	  
+		  <div class="column" id="morning-column">
+			<div class="column-title" id="morning-column-title">
+			  
+			  <h2>Morning</h2>
+			</div>
+			<div class="column-main-content">
+			  <h3>One Small Step</h3>
+			  <p>Choose 1 to 3 long-term goals to work on today, and for each, identify one concrete action that you can realistically start <strong>and</strong> finish today.</p>
+			  <table id="projectlist">
+				<tr>
+				  <td class="td-checkbox-goals"><input type="checkbox"></td>
+				  <td>
+					<div class="projectentry">
+					  1-Create meaningful family moments<br /><input type="text" placeholder="Today I will...">
+					</div>
+				  </td>
+				</tr>
+				
+				<tr>
+				  <td class="td-checkbox-goals"><input type="checkbox"></td>
+				  <td>
+					<div class="projectentry">
+					  2-Determine and prepare for the next step in my career<br />
+					  <input type="text" placeholder="Today I will...">
+					</div>
+				  </td>
+				</tr>
+			  </table>
+	  
+			  <h3>Morning Routine Checklist</h3>
+			  <table id="morningroutine">
+				<tr>
+				  <td>20min inspiring reading</td>
+				  <td class="td-link-habits"><a href="http://calendar.google.com" target="_blank"><img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/file-link-icon.png"></a></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Review personal mission statement and affirmations</td>
+				  <td class="td-link-habits"><a href="http://calendar.google.com" target="_blank"><img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/file-link-icon.png"></a></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>10min meditation</td>
+				  <td></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Review today's schedule</td>
+				  <td class="td-link-habits"><a href="http://calendar.google.com" target="_blank"><img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/file-link-icon.png"></a></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Outside before 9am</td>
+				  <td></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Really, really long item in the morning checklist to check how it looks when too much text is entered and decide what to do about it</td>
+				  <td></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+			  </table>
+			  <h3>Sleep Tracking</h3>
+			  <table>
+				<tr>
+				  <td>Hours of sleep last night</td>
+				  <td> <input type="number" id="sleep" value="8"></td>
+				</tr>
+				<tr>
+				  <td>Quality of sleep</td>
+				  <td>
+					<label for="highenergy"><input id="highenergy" type="radio" name="energylevel">High</label>
+			  <label for="averageenergy"><input id="averageenergy" type="radio" name="energylevel">Average</label>
+			  <label for="lowenergy"><input id="lowenergy" type="radio" name="energylevel">Low</label>
+				  </td>
+				</tr>
+	  
+			  </table>
+			</div>
+		  </div>
+	  
+		  <div class="column" id="evening-column">
+			<div class="column-title" id="evening-column-title">
+			  <h2>Evening</h2>
+			</div>
+			<div class="column-main-content">
+			  
+			  <h3>Work Shutdown Checklist</h3>
+					  <table id="shutdown">
+				<tr>
+				  <td>Final look at new and flagged e-mails</td>
+				  <td></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+						<tr>
+				  <td>Review tomorrow's schedule and to-do list</td>
+				  <td class="td-link-habits"><a href="http://calendar.google.com" target="_blank"><img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/file-link-icon.png"></a></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Review list of ongoing projects, identify next step, and block time in schedule</td>
+				  <td class="td-link-habits"><a href="http://calendar.google.com" target="_blank"><img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/file-link-icon.png"></a></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				  
+				</tr>
+				<tr>
+				  <td>Really, really long item in the shutdown checklist to check how it looks when too much text is entered and decide what to do about it</td>
+				  <td></td>
+				  <td class="td-checkbox-habits"><input type="checkbox"></td>
+				</tr>
+			  </table>
+			  
+			  <h3>Journal</h3>
+			  <p>Summary of the day</p>
+			  <textarea name="day-summary" rows="3" placeholder="Today..."></textarea>
+			  <br /><br />
+					  <p>What are 3 amazing things that happened today?</p>
+			  <textarea name="day-gratitude" rows="3" placeholder="Today..."></textarea>
+			  <br /><br />
+			  <p>One thing you could have done to make today better?</p>
+			  <input type="text" placeholder="I could have...">
+			  <br /><br />
+			  <h3>Progress Towards Goals</h3>
+			  <p>How did you progress on the goals you set this morning?</p>
+			  
+			  <br />
+			  
+			  <p>1-Create meaningful family moments<br /><strong>Today's goal:</strong> Play a boardgame as a family</p>
+			  <input type="text" placeholder="Today I accomplished...">
+			  
+			  <br /><br />
+			  
+	  
+			  
+	  
+			  <h3>Tracking</h3>
+			  <table>
+				<tr>
+				  <td>Energy level today</td>
+				  <td><label for="highenergy"><input id="highenergy" type="radio" name="energylevel">High</label>
+			  <label for="averageenergy"><input id="averageenergy" type="radio" name="energylevel">Average</label>
+			  <label for="lowenergy"><input id="lowenergy" type="radio" name="energylevel">Low</label>
+				  </td>
+				</tr>
+				<tr>
+				  <td>Cups of coffee</td>
+				  <td> <input type="number" id="coffeecups" value="0"></td>
+				</tr>
+				<tr>
+				  <td>Alcoholic drinks</td>
+				  <td> <input type="number" id="alcohol" value="0"></td>
+				</tr>
+	  
+			  </table>
+	  
+	  
+			  <h3>Nutrition - Daily Dozen</h3>
+			  <table id="dailydozen">
+				<tr>
+				  <td>Beans</td>
+				  <td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Berries</td>
+				  <td><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Other fruits</td>
+				  <td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Cruciferous</td>
+				  <td><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Greens</td>
+				  <td><input type="checkbox"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Other vegetables</td>
+				  <td><input type="checkbox"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Flaxseeds</td>
+				  <td><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Nuts</td>
+				  <td><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Spices</td>
+				  <td><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Whole grains</td>
+				  <td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Beverages</td>
+				  <td><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+				</tr>
+				<tr>
+				  <td>Exercice</td>
+				  <td><input type="checkbox"></td>
+				</tr>
+			  </table>
+	  
+			</div>
+		  </div>
+		</div>
+	  
+		<div class="footer">
+		  <p>Footer</p>
+		</div>
+	  
+	  </div>
 
 </body>
 
