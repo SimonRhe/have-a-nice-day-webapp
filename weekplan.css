@@ -1,0 +1,50 @@
+ #weekview {
+     display: grid;
+     grid-template-columns: 4fr repeat(7, 1fr);
+     grid-column-gap: 5px;
+     background-color: green;
+     margin: 5px;
+     min-height: 300px;
+ }
+
+ #blockview {
+     background-color: red;
+
+ }
+
+ .goal-li {
+     background-color: darkgreen;
+     color: white;
+ }
+
+ .day {
+     background-color: blueviolet;
+
+ }
+
+ .dateweekday {
+     text-align: center;
+     font-size: 2em;
+     font-weight: bold;
+     background-color: aliceblue;
+     height: 75px;
+ }
+
+ .daytop {
+     height: 75px;
+     background-color: antiquewhite;
+
+ }
+
+ .dayhabits {
+    height: 75px;
+    background-color: yellow;
+
+}
+
+.dayschedule {
+    min-height: 75px;
+    background-color: aquamarine;
+
+
+}
